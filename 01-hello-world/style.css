@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(242, 242, 242);
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.greeting-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.greeting-text {
+  display: flex;
+  font-size: 80px;
+  font-weight: 600;
+  color: rgb(12, 12, 12);
+  margin-bottom: 20px;
+}
+
+.greeting-letter {
+  display: inline-block;
+  font-family: "Courier New", Courier, monospace;
+  transition: transform 0.5s ease, color 0.5s ease;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 25px;
+  color: rgb(50, 50, 50);
+  font-weight: 400;
+  margin: 0;
+  padding-top: 10px;
+  letter-spacing: 4px;
+}

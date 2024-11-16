@@ -1,20 +1,31 @@
-const head1 = document.getElementById("wordH");
-const head2 = document.getElementById("wordE");
-const head3 = document.getElementById("wordL1");
-const head4 = document.getElementById("wordL2");
-const head5 = document.getElementById("wordO");
-const inputName = document.getElementById("name");
+const letterElements = document.querySelectorAll(".greeting-letter");
 
-head1.textContent = `H`;
-head2.textContent = `E`;
-head3.textContent = `L`;
-head4.textContent = `L`;
-head5.textContent = `O`;
+const userNameDisplay = document.getElementById("userName");
 
-const userName = window.prompt("Please enter your Name");
+let userName = window.prompt("Please enter your Name");
 
-inputName.textContent = `${userName}`;
+if (!userName) {
+  userName = `you don't know your NAME`;
+  userNameDisplay.style.letterSpacing = `0px`;
+}
 
-console.log(
-  `saty still and check the hover over to HELLO if you haven't ${userName}`
-);
+userNameDisplay.textContent = `${userName}!`;
+
+console.log(`Hover over "HELLO" to see magic!`);
+
+function getRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+letterElements.forEach((letter) => {
+  letter.addEventListener("mouseenter", () => {
+    letter.style.color = getRandomColor();
+    letter.style.transform = `scale(1.5)`;
+  });
+  letter.addEventListener("mouseleave", () => {
+    letter.style.transform = `scale(1)`;
+  });
+});
