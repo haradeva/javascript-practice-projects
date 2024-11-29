@@ -40,6 +40,20 @@ body {
   background-color: rgb(63, 193, 93);
 }
 
+#clearBtn {
+  padding: 10px;
+  margin-left: 10px;
+  border: none;
+  background-color: rgb(255, 88, 32);
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#clearBtn:hover {
+  background-color: rgb(249, 116, 72);
+}
+
 #tasks {
   list-style-type: none;
   padding: 0;
